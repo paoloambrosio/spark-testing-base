@@ -59,7 +59,7 @@ trait DataFrameSuiteBaseLike extends SparkContextProvider
 
   protected implicit def impSqlContext: SQLContext = sqlContext
 
-  protected implicit def enableHiveSupport: Boolean = true
+  protected def enableHiveSupport: Boolean = true
 
   def sqlBeforeAllTestCases() {
     if ((SparkSessionProvider._sparkSession ne null) &&
